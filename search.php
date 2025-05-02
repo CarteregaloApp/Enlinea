@@ -1,0 +1,339 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparador de Bancos en Línea Europeos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 1rem 0;
+    }
+    .description {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+    .search-container {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .search-container input {
+      padding: 0.5rem 1rem;
+      width: 60%;
+      max-width: 400px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 20px;
+      padding: 2rem;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      padding: 1.5rem 1rem;
+      transition: transform 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card i {
+      font-size: 2rem;
+      color: green;
+      margin-bottom: 1rem;
+    }
+    .card span {
+      margin-top: 0.5rem;
+      font-weight: normal;
+      color: black;
+    }
+    footer {
+      background-color: #002a4d;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    margin-top: 4rem; /* éloigne les cartes si tu ajoutes cette section dans la même page */
+    }
+ 
+
+.comments-section {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 1.5rem; /* Ajoute un peu d'espace à gauche et à droite */
+  box-sizing: border-box;
+}
+
+.comment {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.comment i.fa-user {
+  font-size: 2rem;
+  color: #888;
+  margin-right: 1rem;
+  margin-top: 0.2rem;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.stars {
+  color: #f5c518;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.username {
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.username .date {
+  font-size: 0.85rem;
+  color: #888;
+  margin-left: 8px;
+}
+   
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Comparador de Bancos en Línea Europeos</h1>
+    <p class="description">
+      Explora los mejores bancos en línea de Europa. Haz clic en un banco para acceder directamente a su sitio web o aplicación oficial. Encuentra el banco que mejor se adapte a tus necesidades.
+    </p>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Buscar un banco...">
+    </div>
+  </header>
+  <main class="container" id="bankContainer">
+    <a href="https://www.revolut.com/" class="card" target="_blank"><i class="fas fa-university"></i><span>Revolut</span></a>
+    <a href="https://n26.com/" class="card" target="_blank"><i class="fas fa-university"></i><span>N26</span></a>
+    <a href="https://www.bunq.com/" class="card" target="_blank"><i class="fas fa-university"></i><span>Bunq</span></a>
+    <a href="https://monese.com/" class="card" target="_blank"><i class="fas fa-university"></i><span>Monese</span></a>
+    <a href="https://wise.com/" class="card" target="_blank"><i class="fas fa-university"></i><span>Wise</span></a>
+    <a href="https://www.hellobank.fr/" class="card" target="_blank"><i class="fas fa-university"></i><span>Hello Bank</span></a>
+    <a href="https://www.boursorama-banque.com/" class="card" target="_blank"><i class="fas fa-university"></i><span>Boursorama Banque</span></a>
+    <a href="https://www.fortuneo.fr/" class="card" target="_blank"><i class="fas fa-university"></i><span>Fortuneo</span></a>
+    <a href="https://www.monabanq.com/" class="card" target="_blank"><i class="fas fa-university"></i><span>Monabanq</span></a>
+    <a href="https://www.labanquepostale.fr/" class="card" target="_blank"><i class="fas fa-university"></i><span>La Banque Postale</span></a>
+    <a href="https://www.credit-agricole.fr/" class="card" target="_blank"><i class="fas fa-university"></i><span>Crédit Agricole</span></a>
+    <a href="https://particuliers.societegenerale.fr/" class="card" target="_blank"><i class="fas fa-university"></i><span>Société Générale</span></a>
+    <a href="https://www.lcl.fr/" class="card" target="_blank"><i class="fas fa-university"></i><span>LCL</span></a>
+    <a href="https://www.banquepopulaire.fr/" class="card" target="_blank"><i class="fas fa-university"></i><span>Banque Populaire</span></a>
+    <a href="https://www.creditmutuel.fr/" class="card" target="_blank"><i class="fas fa-university"></i><span>Crédit Mutuel</span></a>
+    <a href="https://www.openbank.es/" class="card" target="_blank"><i class="fas fa-university"></i><span>Openbank</span></a>
+    <a href="https://www.raiffeisen.ch/" class="card" target="_blank"><i class="fas fa-university"></i><span>Raiffeisen</span></a>
+    <a href="https://www.zkb.ch/" class="card" target="_blank"><i class="fas fa-university"></i><span>Zürcher Kantonalbank</span></a>
+    <a href="https://www.postfinance.ch/" class="card" target="_blank"><i class="fas fa-university"></i><span>PostFinance</span></a>
+    <a href="https://www.klarna.com/" class="card" target="_blank"><i class="fas fa-university"></i><span>Klarna</span></a>
+    <a href="https://uk.virginmoney.com/" class="card" target="_blank"><i class="fas fa-university"></i><span>Virgin Money</span></a>
+   
+<a href="https://kiwibot.zya.me" class="card" target="_blank"><i class="fas fa-university"></i><span>Kiwibot</span></a>
+
+ <a href="https://www.aldautomotive.com/" class="card" target="_blank"><i class="fas fa-university"></i><span>ALD Automotive Bank</span></a>
+    <a href="https://www.ing.com/Home.htm" class="card" target="_blank"><i class="fas fa-university"></i><span>ING</span></a>
+    <a href="https://www.bbva.com/" class="card" target="_blank"><i class="fas fa-university"></i><span>BBVA</span></a>
+    <a href="https://www.abnamro.nl/" class="card" target="_blank"><i class="fas fa-university"></i><span>ABN AMRO</span></a>
+    <a href="https://www.banknorwegian.com/" class="card" target="_blank"><i class="fas fa-university"></i><span>Bank Norwegian</span></a>
+    <a href="https://www.swedbank.com/" class="card" target="_blank"><i class="fas fa-university"></i><span>Swedbank</span></a>
+    <a href="https://www.santander.com/" class="card" target="_blank"><i class="fas fa-university"></i><span>Santander</span></a>
+    <a href="https://www.raiffeisen.at/" class="card" target="_blank"><i class="fas fa-university"></i><span>Raiffeisen AT</span></a>
+    
+<a href="https://www.deutsche-bank.de/" class="card" target="_blank"><i class="fas fa-university"></i><span>Deutsche Bank</span></a>
+
+
+  </main>
+
+ <section class="comments-section">
+
+  <div class="comment">
+    <i class="fas fa-user"></i>
+    <div class="comment-content">
+      <div class="stars">★★★★★</div>
+      <div class="username">Carlos M. <span class="date">14/03/2023</span></div>
+      <div>Muy buena experiencia, interfaz clara y soporte rápido.</div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <i class="fas fa-user"></i>
+    <div class="comment-content">
+      <div class="stars">★★★★☆</div>
+      <div class="username">Lucía G. <span class="date">27/11/2024</span></div>
+      <div>Me gusta, aunque a veces la app se congela.</div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <i class="fas fa-user"></i>
+    <div class="comment-content">
+      <div class="stars">★★★☆☆</div>
+      <div class="username">Pedro R. <span class="date">08/02/2022</span></div>
+      <div>No está mal, pero las comisiones son algo altas.</div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <i class="fas fa-user"></i>
+    <div class="comment-content">
+      <div class="stars">★★★★★</div>
+      <div class="username">Ana T. <span class="date">19/06/2025</span></div>
+      <div>Simplemente perfecto. Muy recomendable.</div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <i class="fas fa-user"></i>
+    <div class="comment-content">
+      <div class="stars">★★★★☆</div>
+      <div class="username">Javier L. <span class="date">03/10/2020</span></div>
+      <div>Todo bien, pero el soporte podría mejorar.</div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <i class="fas fa-user"></i>
+    <div class="comment-content">
+      <div class="stars">★★★★★</div>
+      <div class="username">María D. <span class="date">15/07/2023</span></div>
+      <div>La mejor banca digital que he probado.</div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <i class="fas fa-user"></i>
+    <div class="comment-content">
+      <div class="stars">★★★☆☆</div>
+      <div class="username">Luis F. <span class="date">09/12/2021</span></div>
+      <div>Podría ser más intuitiva la app.</div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <i class="fas fa-user"></i>
+    <div class="comment-content">
+      <div class="stars">★★★★☆</div>
+      <div class="username">Sofía N. <span class="date">21/09/2022</span></div>
+      <div>Rápido, moderno y confiable.</div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <i class="fas fa-user"></i>
+    <div class="comment-content">
+      <div class="stars">★★★★★</div>
+      <div class="username">Diego B. <span class="date">30/01/2024</span></div>
+      <div>Excelente atención al cliente.</div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <i class="fas fa-user"></i>
+    <div class="comment-content">
+      <div class="stars">★★★☆☆</div>
+      <div class="username">Elena C. <span class="date">12/05/2020</span></div>
+      <div>Le falta algo de estabilidad.</div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <i class="fas fa-user"></i>
+    <div class="comment-content">
+      <div class="stars">★★★★☆</div>
+      <div class="username">Tomás V. <span class="date">06/11/2021</span></div>
+      <div>Muy útil para gestionar mis finanzas.</div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <i class="fas fa-user"></i>
+    <div class="comment-content">
+      <div class="stars">★★★★★</div>
+      <div class="username">Carmen Q. <span class="date">28/08/2023</span></div>
+      <div>Transacciones rápidas y sin complicaciones.</div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <i class="fas fa-user"></i>
+    <div class="comment-content">
+      <div class="stars">★★★☆☆</div>
+      <div class="username">Nicolás A. <span class="date">17/02/2024</span></div>
+      <div>No hay muchas opciones de inversión.</div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <i class="fas fa-user"></i>
+    <div class="comment-content">
+      <div class="stars">★★★★☆</div>
+      <div class="username">Isabel E. <span class="date">25/04/2021</span></div>
+      <div>Buen diseño, falta modo oscuro.</div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <i class="fas fa-user"></i>
+    <div class="comment-content">
+      <div class="stars">★★★★★</div>
+      <div class="username">Fernando P. <span class="date">11/01/2025</span></div>
+      <div>Rápido, eficaz y moderno. ¡Me encanta!</div>
+    </div>
+  </div>
+
+</section>
+
+  <footer>
+    &copy; 2025 Comparador de Bancos Europeos. Todos los derechos reservados.
+  </footer>
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.card');searchInput.addEventListener('input', () => {
+  const filter = searchInput.value.toLowerCase();
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    card.style.display = text.includes(filter) ? 'flex' : 'none';
+  });
+});
+
+  </script>
+</body>
+</html>
